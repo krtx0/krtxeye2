@@ -18,7 +18,7 @@ class CustomHeader extends HTMLElement {
               <div>
                 <div class="text-white font-bold text-lg md:text-xl leading-tight"
                      style="font-family: 'Fraunces', Georgia, serif;">
-                  Dr. Siddhesh Bapat
+                  Dr. Kevin Shah
                 </div>
                 <div class="text-xs opacity-60 text-white"
                      style="font-family: 'Atkinson Hyperlegible', Arial, sans-serif; letter-spacing: 0.1em; text-transform: uppercase;">

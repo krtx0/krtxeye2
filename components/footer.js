@@ -14,7 +14,7 @@ class CustomFooter extends HTMLElement {
                   <circle cx="16" cy="16" r="4" fill="rgba(255,255,255,0.45)"/>
                   <circle cx="16" cy="16" r="2" fill="#1F2D3D"/>
                 </svg>
-                <span class="footer-brand">Dr. Siddhesh Bapat</span>
+                <span class="footer-brand">Dr. Kevin Shah</span>
               </div>
               <p class="footer-tagline">Caring for your vision,<br>one patient at a time.</p>
               <div class="flex gap-3 mt-5">
@@ -35,7 +35,7 @@ class CustomFooter extends HTMLElement {
               <h4 class="footer-heading">Quick Links</h4>
               <ul class="footer-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Dr. Bapat</a></li>
+                <li><a href="#about">About Dr. Shah</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#testimonials">Patient Testimonials</a></li>
                 <li><a href="#appointment">Book Appointment</a></li>
@@ -48,15 +48,15 @@ class CustomFooter extends HTMLElement {
               <ul class="footer-contact">
                 <li>
                   <i data-lucide="map-pin" class="footer-icon"></i>
-                  <span>OPD 201, Allcure Superspeciality Hospital, Jogeshwari East, Mumbai 400060</span>
+                  <span>OPD 201, Superspeciality Hospital,  Mumbai 400060</span>
                 </li>
                 <li>
                   <i data-lucide="phone" class="footer-icon"></i>
-                  <span>+91 22 1234 5678</span>
+                  <span>+91 83690 13101</span>
                 </li>
                 <li>
                   <i data-lucide="mail" class="footer-icon"></i>
-                  <span>contact@drbapateyeclinic.com</span>
+                  <span>contact@drShaheyeclinic.com</span>
                 </li>
                 <li>
                   <i data-lucide="clock" class="footer-icon"></i>
@@ -83,7 +83,7 @@ class CustomFooter extends HTMLElement {
 
           <!-- Bottom bar -->
           <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.75rem; text-align: center;">
-            <p class="footer-copy">© <span id="footerYear"></span> Dr. Siddhesh Bapat | Ophthalmologist. All rights reserved.</p>
+            <p class="footer-copy">© <span id="footerYear"></span> Dr. Kevin Shah | Ophthalmologist. All rights reserved.</p>
             <p class="footer-copy" style="margin-top: 0.3rem; opacity: 0.5;">This website is for informational purposes only. Consult a medical professional for personal health advice.</p>
           </div>
         </div>
