@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Siddhesh Bapat | Ophthalmologist | Mumbai Eye Specialist</title>
+  <meta name="description" content="Expert Ophthalmology care in Mumbai. Trusted cataract, retina, LASIK, and IPCL surgery specialist with a patient-first approach.">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="components/header.js" defer></script>
+  <script src="components/footer.js" defer></script>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'teal-dark':   '#0E6B73',
+            'teal-mid':    '#1A8F99',
+            'teal-light':  '#E4F4F5',
+            'teal-xlight': '#F0FAF8',
+            'coral':       '#E8705A',
+            'coral-hover': '#D45A42',
+            'charcoal':    '#1F2D3D',
+            'warm-white':  '#F9F7F4',
+            'mid-gray':    '#6B7A8D',
+            'light-gray':  '#E8E4DF',
+          },
+          fontFamily: {
+            'heading': ['"Fraunces"', 'Georgia', 'serif'],
+            'body':    ['"Atkinson Hyperlegible"', 'Arial', 'sans-serif'],
+          },
+          keyframes: {
+            slideUp: {
+              '0%':   { transform: 'translateY(30px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)',     opacity: '1' },
+            },
+          },
+          animation: {
+            'slide-up': 'slideUp 0.6s ease-out',
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-warm-white font-body text-charcoal">
+
+  <!-- ===================== NAV ===================== -->
+  <custom-header></custom-header>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="home" class="hero-bg text-white section-padding pt-28 md:pt-36">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="max-w-4xl mx-auto text-center animate-on-scroll">
+
+        <!-- Eyebrow label -->
+        <span class="inline-block text-sm font-body font-bold tracking-widest uppercase text-white/60 mb-4">
+          Ophthalmologist · Mumbai
+        </span>
+
+        <h1 class="font-heading text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
+          Trusted Eye Care for<br>
+          <span class="teal-gradient-text">You & Your Family</span>
+        </h1>
+
+        <p class="font-body text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed">
+          Expert Ophthalmology Care in Mumbai — Cataract, Retina, LASIK & More
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+          <a href="#appointment" class="btn-primary">Book an Appointment</a>
+          <a href="#services"    class="btn-secondary">Our Services</a>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+          <div class="hero-badge text-center">
+            <div class="font-heading text-2xl font-bold text-white">4.9 ★</div>
+            <p class="text-xs text-white/60 mt-1 font-body">Google Rating</p>
+          </div>
+          <div class="hero-badge text-center">
+            <div class="font-heading text-2xl font-bold text-white">78+</div>
+            <p class="text-xs text-white/60 mt-1 font-body">Patient Reviews</p>
+          </div>
+          <div class="hero-badge text-center">
+            <div class="font-heading text-2xl font-bold text-white">10+</div>
+            <p class="text-xs text-white/60 mt-1 font-body">Years Experience</p>
+          </div>
+          <div class="hero-badge text-center">
+            <div class="font-heading text-2xl font-bold text-white">500+</div>
+            <p class="text-xs text-white/60 mt-1 font-body">Surgeries Done</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHY CHOOSE ===================== -->
+  <section class="section-padding bg-teal-xlight">
+    <div class="container mx-auto px-4 md:px-8">
+
+      <div class="text-center mb-12 animate-on-scroll">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-charcoal mb-3">
+          Why Choose <span class="text-teal-dark">Dr. Bapat</span>
+        </h2>
+        <p class="font-body text-mid-gray max-w-xl mx-auto">
+          Trusted by generations of Mumbai families for comprehensive eye care with a personal touch.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div class="trust-pillar-card animate-on-scroll">
+          <div class="icon-wrap">
+            <i data-lucide="microscope" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-charcoal mb-2">Expert Precision</h3>
+          <p class="font-body text-sm text-mid-gray">Specialist in cataract, retina, LASIK, and IPCL surgeries with advanced techniques.</p>
+        </div>
+
+        <div class="trust-pillar-card animate-on-scroll">
+          <div class="icon-wrap">
+            <i data-lucide="heart" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-charcoal mb-2">Patient-First Approach</h3>
+          <p class="font-body text-sm text-mid-gray">Takes time to listen, explain, and answer every question. Your comfort is the priority.</p>
+        </div>
+
+        <div class="trust-pillar-card animate-on-scroll">
+          <div class="icon-wrap">
+            <i data-lucide="users" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-charcoal mb-2">Trusted by Families</h3>
+          <p class="font-body text-sm text-mid-gray">Multiple generations rely on Dr. Bapat for their eye health — from children to seniors.</p>
+        </div>
+
+        <div class="trust-pillar-card animate-on-scroll">
+          <div class="icon-wrap">
+            <i data-lucide="smile" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-charcoal mb-2">Calm & Reassuring</h3>
+          <p class="font-body text-sm text-mid-gray">Creates a stress-free experience from your first visit all the way to post-surgery recovery.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section id="services" class="section-padding bg-warm-white">
+    <div class="container mx-auto px-4 md:px-8">
+
+      <div class="text-center mb-12 animate-on-scroll">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-charcoal mb-3">
+          Our <span class="text-teal-dark">Eye Care Services</span>
+        </h2>
+        <p class="font-body text-mid-gray max-w-xl mx-auto">
+          Comprehensive ophthalmology services for all ages and conditions.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+
+        <!-- Service cards -->
+        <div class="service-card animate-on-scroll">
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div class="icon-wrap"><i data-lucide="eye" class="w-5 h-5"></i></div>
+              <h3 class="font-heading text-base font-bold text-charcoal">Cataract Surgery</h3>
+            </div>
+            <p class="font-body text-sm text-mid-gray mb-4">Advanced cataract removal with premium lens implants for crystal-clear vision.</p>
+            <a href="#" class="learn-more font-body">Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+
+        <div class="service-card animate-on-scroll">
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div class="icon-wrap"><i data-lucide="scan" class="w-5 h-5"></i></div>
+              <h3 class="font-heading text-base font-bold text-charcoal">Retina Treatment</h3>
+            </div>
+            <p class="font-body text-sm text-mid-gray mb-4">Specialized care for retinal diseases including diabetic retinopathy and more.</p>
+            <a href="#" class="learn-more font-body">Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+
+        <div class="service-card animate-on-scroll">
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div class="icon-wrap"><i data-lucide="target" class="w-5 h-5"></i></div>
+              <h3 class="font-heading text-base font-bold text-charcoal">LASIK Surgery</h3>
+            </div>
+            <p class="font-body text-sm text-mid-gray mb-4">Laser vision correction for freedom from glasses and contact lenses.</p>
+            <a href="#" class="learn-more font-body">Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+
+        <div class="service-card animate-on-scroll">
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div class="icon-wrap"><i data-lucide="activity" class="w-5 h-5"></i></div>
+              <h3 class="font-heading text-base font-bold text-charcoal">IPCL Surgery</h3>
+            </div>
+            <p class="font-body text-sm text-mid-gray mb-4">For high-power numbers. Implantable lenses for exceptional visual outcomes.</p>
+            <a href="#" class="learn-more font-body">Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+
+        <div class="service-card animate-on-scroll">
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div class="icon-wrap"><i data-lucide="stethoscope" class="w-5 h-5"></i></div>
+              <h3 class="font-heading text-base font-bold text-charcoal">General Eye Checkup</h3>
+            </div>
+            <p class="font-body text-sm text-mid-gray mb-4">Comprehensive eye exams for early detection of vision problems at any age.</p>
+            <a href="#" class="learn-more font-body">Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+
+        <div class="service-card animate-on-scroll">
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div class="icon-wrap"><i data-lucide="baby" class="w-5 h-5"></i></div>
+              <h3 class="font-heading text-base font-bold text-charcoal">Pediatric Eye Care</h3>
+            </div>
+            <p class="font-body text-sm text-mid-gray mb-4">Gentle, reassuring eye care designed specifically for children.</p>
+            <a href="#" class="learn-more font-body">Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+
+        <div class="service-card animate-on-scroll">
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div class="icon-wrap"><i data-lucide="shield" class="w-5 h-5"></i></div>
+              <h3 class="font-heading text-base font-bold text-charcoal">Chemotherapy Eye Care</h3>
+            </div>
+            <p class="font-body text-sm text-mid-gray mb-4">Specialized monitoring and treatment for chemotherapy-related eye issues.</p>
+            <a href="#" class="learn-more font-body">Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+
+        <div class="service-card animate-on-scroll">
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div class="icon-wrap"><i data-lucide="alert-circle" class="w-5 h-5"></i></div>
+              <h3 class="font-heading text-base font-bold text-charcoal">Eye Infection Treatment</h3>
+            </div>
+            <p class="font-body text-sm text-mid-gray mb-4">Prompt diagnosis and treatment for eye infections and inflammations.</p>
+            <a href="#" class="learn-more font-body">Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="section-padding bg-teal-xlight">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-14">
+
+        <!-- Image side -->
+        <div class="lg:w-1/2 animate-on-scroll">
+          <div class="about-image-wrap">
+            <div class="bg-accent"></div>
+            <img src="https://placehold.co/600x420/0E6B73/FFFFFF?text=Dr.+Siddhesh+Bapat"
+                 alt="Dr. Siddhesh Bapat, Ophthalmologist"
+                 class="w-full">
+          </div>
+
+          <!-- Stats row -->
+          <div class="grid grid-cols-4 gap-3 mt-6">
+            <div class="stat-badge">
+              <div class="stat-number">500+</div>
+              <div class="stat-label">Surgeries</div>
+            </div>
+            <div class="stat-badge">
+              <div class="stat-number">4.9★</div>
+              <div class="stat-label">Rating</div>
+            </div>
+            <div class="stat-badge">
+              <div class="stat-number">78+</div>
+              <div class="stat-label">Reviews</div>
+            </div>
+            <div class="stat-badge">
+              <div class="stat-number">6+</div>
+              <div class="stat-label">Specialties</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text side -->
+        <div class="lg:w-1/2 animate-on-scroll">
+          <span class="inline-block text-xs font-body font-bold tracking-widest uppercase text-teal-mid mb-3">About the Doctor</span>
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-charcoal mb-6">
+            Dr. Siddhesh Bapat
+          </h2>
+          <p class="font-body text-mid-gray text-base mb-5 leading-relaxed">
+            Dr. Siddhesh Bapat is a highly regarded Ophthalmologist practicing at Allcure Superspeciality Hospital, Jogeshwari East, Mumbai. Known for his patient-first philosophy, Dr. Bapat takes the time to understand each patient's concerns and explains every step of their treatment clearly.
+          </p>
+          <p class="font-body text-mid-gray text-base mb-8 leading-relaxed">
+            His expertise spans cataract surgery, retina care, LASIK, and complex cases — with an approach that has earned the lasting trust of hundreds of families across Mumbai.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <div class="check-item">
+              <i data-lucide="check-circle" class="w-5 h-5 text-teal-dark"></i>
+              <span class="font-body text-charcoal">Warm & Knowledgeable</span>
+            </div>
+            <div class="check-item">
+              <i data-lucide="check-circle" class="w-5 h-5 text-teal-dark"></i>
+              <span class="font-body text-charcoal">Never Rushes Patients</span>
+            </div>
+            <div class="check-item">
+              <i data-lucide="check-circle" class="w-5 h-5 text-teal-dark"></i>
+              <span class="font-body text-charcoal">Family-Trusted Care</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section id="testimonials" class="section-padding bg-warm-white">
+    <div class="container mx-auto px-4 md:px-8">
+
+      <div class="text-center mb-12 animate-on-scroll">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-charcoal mb-3">
+          What Our <span class="text-teal-dark">Patients Say</span>
+        </h2>
+        <p class="font-body text-mid-gray max-w-xl mx-auto">Real experiences from patients who trusted Dr. Bapat with their vision.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Star SVG helper — reused inline -->
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card animate-on-scroll">
+          <div class="star-rating">
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <blockquote class="mb-5">"A genuine professional — straightforward, extremely well-trained, and the experience was excellent throughout."</blockquote>
+          <div class="flex items-center">
+            <div class="reviewer-avatar">S</div>
+            <div>
+              <p class="font-heading font-bold text-charcoal text-sm">Shilpa</p>
+              <p class="font-body text-xs text-mid-gray">Cataract Surgery Patient</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card animate-on-scroll">
+          <div class="star-rating">
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <blockquote class="mb-5">"He calmly answers all questions and makes sure the patient truly understands. I visited for both my son and my mother."</blockquote>
+          <div class="flex items-center">
+            <div class="reviewer-avatar">A</div>
+            <div>
+              <p class="font-heading font-bold text-charcoal text-sm">Archana</p>
+              <p class="font-body text-xs text-mid-gray">Family Care Patient</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card animate-on-scroll">
+          <div class="star-rating">
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <blockquote class="mb-5">"From first visit to post-op check-up — no hassle, everything handled perfectly. A fun trip, not a scary one!"</blockquote>
+          <div class="flex items-center">
+            <div class="reviewer-avatar">S</div>
+            <div>
+              <p class="font-heading font-bold text-charcoal text-sm">Sanjay</p>
+              <p class="font-body text-xs text-mid-gray">Cataract Surgery Patient</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="testimonial-card animate-on-scroll">
+          <div class="star-rating">
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <blockquote class="mb-5">"I came totally blind. I am heartily thankful to Dr. Bapat for his support, guidance, and the care he showed throughout."</blockquote>
+          <div class="flex items-center">
+            <div class="reviewer-avatar">J</div>
+            <div>
+              <p class="font-heading font-bold text-charcoal text-sm">Jagdish</p>
+              <p class="font-body text-xs text-mid-gray">Retina Patient</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div class="testimonial-card animate-on-scroll">
+          <div class="star-rating">
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <blockquote class="mb-5">"My eye had -11 power. After IPCL surgery with Dr. Bapat, I can see 90% — it has been absolutely life-changing."</blockquote>
+          <div class="flex items-center">
+            <div class="reviewer-avatar">R</div>
+            <div>
+              <p class="font-heading font-bold text-charcoal text-sm">Rushda</p>
+              <p class="font-body text-xs text-mid-gray">IPCL Surgery Patient</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 6 -->
+        <div class="testimonial-card animate-on-scroll">
+          <div class="star-rating">
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <blockquote class="mb-5">"He never rushes through patients and spends time explaining every detail. Our whole family visits Dr. Bapat."</blockquote>
+          <div class="flex items-center">
+            <div class="reviewer-avatar">B</div>
+            <div>
+              <p class="font-heading font-bold text-charcoal text-sm">Bhaskar</p>
+              <p class="font-body text-xs text-mid-gray">Family Patient</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Google CTA -->
+      <div class="text-center mt-12 animate-on-scroll">
+        <a href="#" class="google-reviews-btn">
+          <i data-lucide="star" class="w-4 h-4"></i>
+          Read 78+ Reviews on Google
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== APPOINTMENT ===================== -->
+  <section id="appointment" class="section-padding bg-teal-xlight">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+        <!-- Form -->
+        <div class="animate-on-scroll">
+          <span class="inline-block text-xs font-body font-bold tracking-widest uppercase text-teal-mid mb-3">Get In Touch</span>
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-charcoal mb-3">
+            Book Your Appointment
+          </h2>
+          <p class="font-body text-mid-gray mb-8">Schedule a consultation with Dr. Bapat for personalised eye care.</p>
+
+          <div class="bg-white p-8 rounded-2xl shadow-soft">
+            <form id="appointmentForm" class="space-y-5">
+              <div>
+                <label class="block font-body font-bold text-charcoal text-sm mb-2">Full Name</label>
+                <input type="text" name="name" class="form-input" required placeholder="Your name">
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div>
+                  <label class="block font-body font-bold text-charcoal text-sm mb-2">Phone Number</label>
+                  <input type="tel" name="phone" class="form-input" required placeholder="+91 00000 00000">
+                </div>
+                <div>
+                  <label class="block font-body font-bold text-charcoal text-sm mb-2">Email Address</label>
+                  <input type="email" name="email" class="form-input" placeholder="Optional">
+                </div>
+              </div>
+              <div>
+                <label class="block font-body font-bold text-charcoal text-sm mb-2">Preferred Date</label>
+                <input type="date" name="date" class="form-input">
+              </div>
+              <div>
+                <label class="block font-body font-bold text-charcoal text-sm mb-2">Message / Concern</label>
+                <textarea name="message" rows="4" class="form-input" placeholder="Describe your eye care needs..."></textarea>
+              </div>
+              <button type="submit">Request Appointment</button>
+            </form>
+            <p class="font-body text-xs text-mid-gray text-center mt-5">Walk-ins welcome · Mon–Sat 10am–6pm · Sun 10am–2pm</p>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="animate-on-scroll">
+          <span class="inline-block text-xs font-body font-bold tracking-widest uppercase text-teal-mid mb-3">Find Us</span>
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-charcoal mb-6">Our Location</h2>
+
+          <div class="bg-white p-8 rounded-2xl shadow-soft mb-6">
+            <div class="flex items-start mb-5">
+              <div class="contact-info-icon"><i data-lucide="map-pin" class="w-5 h-5"></i></div>
+              <div>
+                <h3 class="font-heading font-bold text-charcoal mb-1">Clinic Address</h3>
+                <p class="font-body text-sm text-mid-gray leading-relaxed">OPD 201, 2nd Floor, Kesar Plaza<br>Allcure Superspeciality Hospital<br>Station Rd, above ICICI Bank<br>Jogeshwari East, Mumbai 400060</p>
+              </div>
+            </div>
+            <div class="flex items-start mb-5">
+              <div class="contact-info-icon"><i data-lucide="phone" class="w-5 h-5"></i></div>
+              <div>
+                <h3 class="font-heading font-bold text-charcoal mb-1">Phone</h3>
+                <p class="font-body text-sm text-mid-gray">+91 22 1234 5678</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="contact-info-icon"><i data-lucide="clock" class="w-5 h-5"></i></div>
+              <div>
+                <h3 class="font-heading font-bold text-charcoal mb-1">Clinic Hours</h3>
+                <p class="font-body text-sm text-mid-gray">Mon – Sat: 10:00 AM – 6:00 PM<br>Sunday: 10:00 AM – 2:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map placeholder -->
+          <div class="map-placeholder h-64 flex items-center justify-center rounded-2xl shadow-soft">
+            <div class="text-center text-white px-6">
+              <i data-lucide="map" class="w-10 h-10 mx-auto mb-3 opacity-70"></i>
+              <h3 class="font-heading font-bold text-lg mb-1">Allcure Superspeciality Hospital</h3>
+              <p class="font-body text-sm text-white/70 mb-4">Jogeshwari East, Mumbai</p>
+              <a href="https://maps.google.com/?q=Allcure+Superspeciality+Hospital+Jogeshwari+East+Mumbai"
+                 target="_blank"
+                 class="inline-block bg-coral text-white font-body font-bold text-sm px-5 py-2 rounded-md hover:bg-coral-hover transition">
+                Open in Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER (component) ===================== -->
+  <custom-footer></custom-footer>
+
+  <!-- Fallback copyright block (used by component) -->
+  <div id="currentYear" class="hidden"></div>
+
+  <!-- ===================== MODAL ===================== -->
+  <div id="successModal" class="modal-overlay fixed inset-0 flex items-center justify-center z-50 hidden">
+    <div class="modal-box bg-white p-8 max-w-md mx-4 shadow-2xl">
+      <div class="modal-icon-wrap">
+        <i data-lucide="check-circle" class="w-8 h-8"></i>
+      </div>
+      <h3 class="font-heading text-2xl font-bold text-charcoal text-center mb-3">Appointment Request Sent!</h3>
+      <p class="font-body text-mid-gray text-center mb-6">Our team will contact you within 24 hours to confirm your consultation with Dr. Bapat.</p>
+      <button id="closeModal" class="modal-close-btn w-full">Close</button>
+    </div>
+  </div>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    lucide.createIcons();
+
+    // Mobile menu (works with custom-header component)
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+    });
+
+    // Scroll animations
+    function animateOnScroll() {
+      document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight - 80) {
+          el.classList.add('animated');
+        }
+      });
+    }
+    animateOnScroll();
+    window.addEventListener('scroll', animateOnScroll);
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (href === '#') return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+      });
+    });
+
+    // Appointment form
+    const form  = document.getElementById('appointmentForm');
+    const modal = document.getElementById('successModal');
+    const close = document.getElementById('closeModal');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      modal.classList.remove('hidden');
+      form.reset();
+    });
+    close.addEventListener('click', () => modal.classList.add('hidden'));
+    modal.addEventListener('click', e => { if (e.target === modal) modal.classList.add('hidden'); });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,643 @@
+/* ============================================================
+   DR. SIDDHESH BAPAT — STYLE.CSS
+   Palette: Teal + Coral + Warm White
+   Fonts: Fraunces (headings) + Atkinson Hyperlegible (body)
+   ============================================================ */
+
+/* ---------- Google Fonts Import ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Atkinson+Hyperlegible:wght@400;700&display=swap');
+
+/* ---------- CSS Variables ---------- */
+:root {
+  --teal-dark:    #0E6B73;
+  --teal-mid:     #1A8F99;
+  --teal-light:   #E4F4F5;
+  --teal-xlight:  #F0FAF8;
+  --coral:        #E8705A;
+  --coral-hover:  #D45A42;
+  --charcoal:     #1F2D3D;
+  --warm-white:   #F9F7F4;
+  --mid-gray:     #6B7A8D;
+  --light-gray:   #E8E4DF;
+  --white:        #FFFFFF;
+
+  --font-heading: 'Fraunces', Georgia, serif;
+  --font-body:    'Atkinson Hyperlegible', Arial, sans-serif;
+
+  --radius-sm:    6px;
+  --radius-md:    12px;
+  --radius-lg:    20px;
+  --shadow-soft:  0 2px 16px rgba(14, 107, 115, 0.08);
+  --shadow-card:  0 4px 24px rgba(14, 107, 115, 0.10);
+  --shadow-hover: 0 12px 36px rgba(14, 107, 115, 0.16);
+}
+
+/* ---------- Base Reset ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--charcoal);
+  background-color: var(--warm-white);
+  overflow-x: hidden;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Typography ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--charcoal);
+  letter-spacing: -0.01em;
+}
+
+p {
+  font-family: var(--font-body);
+  color: var(--mid-gray);
+  line-height: 1.75;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- Tailwind Color Overrides (via CSS vars) ----------
+   These classes mirror what Tailwind would generate for our custom palette.
+   The Tailwind config in HTML handles JIT; these are fallbacks + extras.
+   ----------------------------------------------------------- */
+
+/* ---------- Layout Helpers ---------- */
+.section-padding {
+  padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 3rem 0;
+  }
+}
+
+/* ---------- Navigation ---------- */
+.sticky-nav {
+  transition: padding 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(14, 107, 115, 0.97);
+}
+
+.sticky-nav.scrolled {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  box-shadow: 0 4px 24px rgba(14, 107, 115, 0.18);
+}
+
+/* Nav links */
+.sticky-nav a:not(.cta-btn) {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  color: rgba(255,255,255,0.88);
+  transition: color 0.2s ease;
+}
+
+.sticky-nav a:not(.cta-btn):hover {
+  color: #ffffff;
+}
+
+/* ---------- Hero Section ---------- */
+.hero-bg {
+  background: 
+    linear-gradient(160deg, rgba(14, 107, 115, 0.97) 0%, rgba(10, 60, 65, 0.98) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative lens / circle pattern */
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  border: 80px solid rgba(255,255,255,0.04);
+  pointer-events: none;
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  border: 60px solid rgba(255,255,255,0.04);
+  pointer-events: none;
+}
+
+/* Teal gradient text (replaces gold-gradient-text) */
+.teal-gradient-text {
+  background: linear-gradient(90deg, #7EDDE5, #B8F0F4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Keep old class name working too */
+.gold-gradient-text {
+  background: linear-gradient(90deg, #7EDDE5, #B8F0F4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Hero trust badges */
+.hero-badge {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  transition: background 0.2s ease;
+}
+
+.hero-badge:hover {
+  background: rgba(255,255,255,0.13);
+}
+
+/* ---------- CTA Buttons ---------- */
+/* Primary — Coral, used for all main CTAs */
+.btn-primary,
+a.btn-primary,
+button.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--coral);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--coral);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 16px rgba(232, 112, 90, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: var(--coral-hover);
+  border-color: var(--coral-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232, 112, 90, 0.4);
+}
+
+/* Secondary — Teal outline */
+.btn-secondary,
+a.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-sm);
+  border: 2px solid rgba(255,255,255,0.6);
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.9);
+}
+
+/* ---------- Why Choose — Trust Pillar Cards ---------- */
+.trust-pillar-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  border-left: 3px solid var(--teal-mid);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trust-pillar-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.trust-pillar-card .icon-wrap {
+  background-color: var(--teal-light);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: var(--teal-dark);
+}
+
+/* ---------- Service Cards ---------- */
+.service-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--light-gray);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--teal-mid);
+  border-top: 3px solid var(--teal-mid);
+}
+
+.service-card .icon-wrap {
+  background-color: var(--teal-light);
+  padding: 0.75rem;
+  border-radius: var(--radius-sm);
+  color: var(--teal-dark);
+  margin-right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-card .learn-more {
+  color: var(--teal-dark);
+  font-weight: 700;
+  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.service-card .learn-more:hover {
+  color: var(--teal-mid);
+  gap: 8px;
+}
+
+/* ---------- About Section ---------- */
+.about-image-wrap {
+  position: relative;
+}
+
+.about-image-wrap .bg-accent {
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--teal-dark), var(--teal-mid));
+  z-index: 0;
+}
+
+.about-image-wrap img {
+  position: relative;
+  z-index: 1;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 60px rgba(14, 107, 115, 0.2);
+}
+
+.stat-badge {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  border-bottom: 3px solid var(--teal-light);
+}
+
+.stat-badge .stat-number {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--teal-dark);
+}
+
+.stat-badge .stat-label {
+  font-size: 0.8rem;
+  color: var(--mid-gray);
+  margin-top: 2px;
+}
+
+/* ---------- Testimonial Cards ---------- */
+.testimonial-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  border: 1px solid var(--light-gray);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Decorative large quotation mark */
+.testimonial-card::before {
+  content: '\201C';
+  font-family: var(--font-heading);
+  font-size: 6rem;
+  line-height: 1;
+  color: var(--teal-dark);
+  opacity: 0.08;
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.testimonial-card blockquote {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--charcoal);
+  font-size: 0.97rem;
+  line-height: 1.75;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-card .reviewer-avatar {
+  background-color: var(--teal-light);
+  color: var(--teal-dark);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* SVG stars for testimonials */
+.star-rating {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 1rem;
+}
+
+.star-rating svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--coral);
+}
+
+/* ---------- Appointment Form ---------- */
+.form-input,
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+textarea,
+select {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--charcoal);
+  border: 1.5px solid var(--light-gray);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  width: 100%;
+  background: var(--white);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.form-input:focus,
+input:focus,
+textarea:focus {
+  border-color: var(--teal-mid);
+  box-shadow: 0 0 0 3px rgba(26, 143, 153, 0.15);
+}
+
+.form-input::placeholder,
+textarea::placeholder {
+  color: #AABAC8;
+}
+
+/* Submit button inherits btn-primary but is full-width */
+button[type="submit"] {
+  width: 100%;
+  background-color: var(--coral);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 16px rgba(232, 112, 90, 0.3);
+  letter-spacing: 0.02em;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--coral-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232, 112, 90, 0.4);
+}
+
+/* ---------- Map Placeholder ---------- */
+.map-placeholder {
+  background: linear-gradient(135deg, var(--teal-dark) 0%, #0A4A50 100%);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+/* ---------- Contact Info Cards ---------- */
+.contact-info-icon {
+  background-color: var(--teal-light);
+  color: var(--teal-dark);
+  padding: 0.75rem;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+/* ---------- Google Reviews Button ---------- */
+.google-reviews-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--charcoal);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.google-reviews-btn:hover {
+  background-color: var(--teal-dark);
+  transform: translateY(-2px);
+}
+
+/* ---------- Footer ---------- */
+footer.main-footer {
+  background-color: var(--charcoal);
+  color: rgba(255,255,255,0.75);
+  font-family: var(--font-body);
+}
+
+footer.main-footer h3,
+footer.main-footer h4 {
+  color: var(--white);
+  font-family: var(--font-heading);
+}
+
+footer.main-footer a {
+  color: rgba(255,255,255,0.65);
+  transition: color 0.2s ease;
+}
+
+footer.main-footer a:hover {
+  color: var(--teal-light);
+}
+
+footer.main-footer .footer-divider {
+  border-color: rgba(255,255,255,0.1);
+}
+
+footer.main-footer .leave-review-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--coral);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s ease;
+}
+
+footer.main-footer .leave-review-btn:hover {
+  background-color: var(--coral-hover);
+  color: var(--white);
+}
+
+/* ---------- Modal ---------- */
+.modal-overlay {
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+}
+
+.modal-box {
+  border-radius: var(--radius-lg);
+}
+
+.modal-icon-wrap {
+  background-color: var(--teal-light);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: var(--teal-dark);
+}
+
+.modal-close-btn {
+  background-color: var(--coral);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 700;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  background-color: var(--coral-hover);
+}
+
+/* ---------- Section Background Alternation ---------- */
+.bg-warm-white { background-color: var(--warm-white); }
+.bg-teal-light  { background-color: var(--teal-xlight); }
+.bg-white       { background-color: var(--white); }
+
+/* ---------- Scroll Animations ---------- */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delay for sibling cards */
+.animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+.animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+.animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+
+/* ---------- Check-mark List Items ---------- */
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  color: var(--charcoal);
+  font-size: 0.97rem;
+}
+
+.check-item svg {
+  color: var(--teal-dark);
+  flex-shrink: 0;
+}
+
+/* ---------- Responsive Tweaks ---------- */
+@media (max-width: 640px) {
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 1.85rem; }
+
+  .trust-pillar-card,
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+}
